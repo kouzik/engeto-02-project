@@ -50,12 +50,13 @@
   }
 
   @media (max-width: 768px) {
-    .head nav {
+    .menu-list {
       display: none;
       position: absolute;
       top: 70px;
       background-color: var(--bg-color);
       width: 100%;
+      transition: opacity 1s ease;
     }
   }
 
@@ -63,6 +64,11 @@
     list-style-type: none;
     display: inline-block;
     margin-right: 20px;
+  }
+  @media (min-width: 768px) {
+    .menu-list {
+      display: block !important;
+    }
   }
   @media (max-width: 768px) {
     .menu li {
@@ -93,5 +99,14 @@
     background-image: url(./img/background.webp);
     background-size: cover;
     background-position: center;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 100px);
+  }
+
+  footer {
+    color: white;
+    background-color: var(--bg-color);
+    padding: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
   }
