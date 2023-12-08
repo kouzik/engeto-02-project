@@ -78,10 +78,8 @@
       top: 70px;
       background-color: var(--bg-color);
       width: 100%;
-      transition: opacity 1s ease;
     }
   }
-  
   @media (min-width: 768px) {
     .menu-list {
       display: block !important;
