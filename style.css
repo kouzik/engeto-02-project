@@ -1,5 +1,7 @@
 :root {
-    --bg-color: #15304c;
+    --bg-color: rgb(37, 92, 46);
+    --nav-height: 70px;
+    --footer-height: 30px;
   }
 
 * {
@@ -9,7 +11,7 @@
   }
 
   body {
-    font-family: Roboto;
+    font-family: 'Roboto';
   }
   
   img {
@@ -18,10 +20,6 @@
     object-fit: cover;
   }
 
-  .content {
-    margin: 0 auto;
-    width: 90%;
-  }
 
   /* HEADER */
   .head {
@@ -29,7 +27,7 @@
     flex-direction: row;
     align-items: center;
     background-color: var(--bg-color);
-    height: 70px;
+    height: var(--nav-height);
   }
 
   @media (max-width: 768px) {
@@ -42,11 +40,35 @@
     flex-grow: 1;
     margin-left: 20px;
   }
+
   .logo img {
     width: 200px;
   }
+
+
+  /* MENU */
   .menu {
     margin-right: 30px;
+  }
+
+  .menu li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .menu li * {
+    color: white;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .menu li {
+        display: block;
+        text-align: center;
+        margin: 30px 0;
+        font-size: 25px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -59,30 +81,15 @@
       transition: opacity 1s ease;
     }
   }
-
-  .menu li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 20px;
-  }
+  
   @media (min-width: 768px) {
     .menu-list {
       display: block !important;
     }
   }
-  @media (max-width: 768px) {
-    .menu li {
-        display: block;
-        text-align: center;
-        margin: 30px 0;
-        font-size: 25px;
-    }
-  }
+  
 
-  .menu li a {
-    color: white;
-    text-decoration: none;
-  }
+  /* MENU ICON */
   .menu-icon {
     display: none;
     margin-right: 30px;
@@ -94,19 +101,22 @@
     }
   }
 
-  /* WELCOME */
-  .welcome {
-    background-image: url(./img/background.webp);
+
+  /* CONTENT */
+  .content {
+    background-image: url(./img/background.jpeg);
     background-size: cover;
     background-position: center;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - var(--footer-height) - var(--nav-height));
   }
 
+
+  /* FOOTER */
   footer {
     color: white;
     background-color: var(--bg-color);
     padding: 0 auto;
-    height: 30px;
-    line-height: 30px;
+    height: var(--footer-height);
+    line-height: var(--footer-height);
     text-align: center;
   }
